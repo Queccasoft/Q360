@@ -1,0 +1,168 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`layout resolvePagePaddings Should keep other styles untouched 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "style": Object {
+        "color": "red",
+      },
+      "type": "PAGE",
+    },
+  ],
+  "type": "DOCUMENT",
+}
+`;
+
+exports[`layout resolvePagePaddings Should leave numeric paddingBottom as it is 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "style": Object {
+        "paddingBottom": 50,
+      },
+      "type": "PAGE",
+    },
+  ],
+  "type": "DOCUMENT",
+}
+`;
+
+exports[`layout resolvePagePaddings Should leave numeric paddingLeft as it is 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "style": Object {
+        "paddingLeft": 50,
+      },
+      "type": "PAGE",
+    },
+  ],
+  "type": "DOCUMENT",
+}
+`;
+
+exports[`layout resolvePagePaddings Should leave numeric paddingRight as it is 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "style": Object {
+        "paddingRight": 50,
+      },
+      "type": "PAGE",
+    },
+  ],
+  "type": "DOCUMENT",
+}
+`;
+
+exports[`layout resolvePagePaddings Should leave numeric paddingTop as it is 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "style": Object {
+        "paddingTop": 50,
+      },
+      "type": "PAGE",
+    },
+  ],
+  "type": "DOCUMENT",
+}
+`;
+
+exports[`layout resolvePagePaddings Should resolve percent paddingBottom 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "style": Object {
+        "height": 200,
+        "paddingBottom": 20,
+        "width": 100,
+      },
+      "type": "PAGE",
+    },
+  ],
+  "type": "DOCUMENT",
+}
+`;
+
+exports[`layout resolvePagePaddings Should resolve percent paddingLeft 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "style": Object {
+        "height": 200,
+        "paddingLeft": 10,
+        "width": 100,
+      },
+      "type": "PAGE",
+    },
+  ],
+  "type": "DOCUMENT",
+}
+`;
+
+exports[`layout resolvePagePaddings Should resolve percent paddingRight 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "style": Object {
+        "height": 200,
+        "paddingRight": 10,
+        "width": 100,
+      },
+      "type": "PAGE",
+    },
+  ],
+  "type": "DOCUMENT",
+}
+`;
+
+exports[`layout resolvePagePaddings Should resolve percent paddingTop 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "style": Object {
+        "height": 200,
+        "paddingTop": 20,
+        "width": 100,
+      },
+      "type": "PAGE",
+    },
+  ],
+  "type": "DOCUMENT",
+}
+`;
+
+exports[`layout resolvePagePaddings Should resolve several pages 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "style": Object {
+        "height": 200,
+        "paddingTop": 10,
+        "width": 100,
+      },
+      "type": "PAGE",
+    },
+    Object {
+      "style": Object {
+        "height": 200,
+        "paddingBottom": 20,
+        "width": 100,
+      },
+      "type": "PAGE",
+    },
+    Object {
+      "style": Object {
+        "height": 200,
+        "paddingLeft": 10,
+        "paddingRight": 10,
+        "width": 100,
+      },
+      "type": "PAGE",
+    },
+  ],
+  "type": "DOCUMENT",
+}
+`;

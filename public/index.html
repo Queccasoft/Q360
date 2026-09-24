@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" style="margin: 0; padding: 0;">
+  <head>
+    <script>
+  // Absolute earliest execution point
+  window.global = window;
+  window.process = {
+    nextTick: function(fn) { setTimeout(fn, 0); },
+    env: { NODE_ENV: 'development' },
+    browser: true
+  };
+</script>
+    <meta charset="utf-8" />
+    
+    <link src="../src/Assets/Header/QUECCASOFT_LOGO_FINAL_2.png" rel="icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Q360 Office Suite Editors. ">
+    <meta name="keywords" content="queccasoft, q360, qnote, qsheet, qdoc, qslide, qvid, qwave, qcanva, email editor, json editor">
+    <meta name="robots" content="NOINDEX,FOLLOW">
+
+    <meta property="og:site_name" content="Queccasoft Q360">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Q360">
+
+    <link rel="apple-touch-icon" src="../src/Assets/Header/q360/q360.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <script src="https://kit.fontawesome.com/d8b475a339.js" crossorigin="anonymous"></script>
+    
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+  <!-- Template Main CSS File -->
+  <link href="../src/App.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <title>Queccasoft Q360</title>
+    <style src="../src/App.css">
+    </style>
+    
+  </head>
+  <body style="margin: 0; padding: 0;">
+    
+    <div id="root" style="margin: 0; padding: 0;"></div>
+    <script>
+  </script>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>

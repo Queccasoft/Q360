@@ -1,0 +1,344 @@
+:root {
+  --qsheet-theme-color: #00c800;
+  --qsheet-theme-hover: #009500;
+  --bg-light: #f8f9fa;
+  --bg-dark: #121212;
+  --card-light: #ffffff;
+  --card-dark: #1e1e1e;
+  --text-light: #212529;
+  --text-dark: #e0e0e0;
+}
+
+/* --- Main Layout & Dark Mode --- */
+.app-wrapper {
+  min-height: 100vh;
+  max-height: 100vh !important;
+  padding: 1rem;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.app-wrapper .container {
+    max-width: 100% !important;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.app-wrapper.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.app-wrapper.dark-mode .modal-content {
+  background-color: var(--card-dark);
+  color: var(--text-dark);
+  border: 1px solid #333;
+}
+
+.app-wrapper.dark-mode .form-control,
+.app-wrapper.dark-mode .form-select {
+  background-color: #2d2d2d;
+  border-color: #444;
+  color: var(--text-dark);
+}
+
+/* --- Rounded Inputs & Buttons --- */
+.rounded-ui {
+  border-radius: 50px !important;
+}
+
+.qsheet-btn {
+  background-color: var(--qsheet-theme-color)!important;
+  color: white!important;
+  border: none!important;
+  border-radius: 50px!important;
+  padding: 8px 20px;
+  transition: transform 0.2s, box-shadow 0.2s!important;
+}
+
+.qsheet-btn:hover {
+  background-color: var(--qsheet-theme-hover)!important;
+  transform: translateY(-2px)!important;
+  box-shadow: 0 4px 10px rgba(0, 200, 0, 0.3)!important;
+  color: white!important;
+}
+
+.qsheet-outline-btn {
+  background-color: transparent!important;
+  border: 2px solid var(--qsheet-theme-color)!important;
+  color: var(--qsheet-theme-color)!important;
+  border-radius: 50px;
+  padding: 6px 16px;
+  transition: all 0.2s;
+}
+
+.qsheet-outline-btn:hover {
+  background-color: var(--qsheet-theme-color)!important;
+  color: white;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 100rem!important; /* Optional: limits width on very wide screens */
+  margin: 0 auto;  /* Centers it */
+}
+
+.search-icon-inside {
+  position: absolute;
+  left: 1.2rem;
+  color: #00c800;
+  z-index: 5;
+  font-size: 1.1rem;
+}
+
+.qsheet-search-bar {
+  border-radius: 50px !important;
+  padding-left: 3.2rem !important; /* Space for the icon */
+  padding-right: 1.5rem;
+  height: 48px;
+  border: 1px solid #dfe1e5 !important;
+  box-shadow: 0 1px 6px rgb(0, 200, 0) !important;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  background-color: transparent !important;
+}
+
+/* Dark Mode Support */
+.app-wrapper.dark-mode .qsheet-search-bar {
+  border-color: #00c800 !important;
+  box-shadow: 0 1px 6px rgb(0, 200, 0) !important;
+  color: white;
+}
+
+/* The Focus Effect */
+.qsheet-search-bar:focus {
+  background-color: white !important;
+  border-color: rgb(0, 200, 0, 1) !important;
+  box-shadow: 0 2px 12px rgb(0, 200, 0) !important;
+}
+
+.app-wrapper.dark-mode .qsheet-search-bar:focus {
+  background-color: #303134 !important;
+  box-shadow: 0 2px 12px rgb(0, 200, 0) !important;
+}
+
+/* --- Qsheet Tag Pill System --- */
+.tag-filter-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome/Safari */
+}
+
+.q-tag-pill {
+  cursor: pointer;
+  padding: 0.5rem 1rem !important;
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+  white-space: nowrap;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  background-color: transparent !important;
+  color: var(--qsheet-theme-color) !important;
+  border: 1.5px solid var(--qsheet-theme-color) !important;
+  box-shadow: 0 2px 6px rgba(0, 200, 0, 0.15) !important;
+}
+
+/* Hover & Focus State */
+.q-tag-pill:hover, .q-tag-pill:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0, 200, 0, 0.35) !important;
+  background-color: var(--qsheet-theme-color) !important;
+  color: white !important;
+}
+
+/* Selected / Active State */
+.q-tag-pill.active {
+  background-color: var(--qsheet-theme-color) !important;
+  color: white !important;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 10px rgba(0, 200, 0, 0.4) !important;
+}
+
+/* Dark Mode Adjustment */
+.app-wrapper.dark-mode .q-tag-pill {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* --- Sheet Cards --- */
+@media (max-width: 576px) {
+  .sheet-item-card .p-4 {
+    padding: 1rem !important; /* Reduce padding on mobile */
+  }
+  
+  .sheet-item-card h6 {
+    font-size: 0.9rem; /* Slightly smaller heading */
+  }
+
+  .app-wrapper {
+    padding: 0.5rem; /* Less wrapper padding to give Sheets more room */
+  }
+}
+
+.sheet-item-card {
+  border-radius: 15px;
+  border: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+}
+
+.sheet-item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgb(0, 200, 0)!important;
+  cursor: pointer;
+}
+
+/* --- Toolbar & Editor --- */
+/* Ensure the editor doesn't get hidden behind the fixed toolbar on mobile */
+@media (max-width: 991px) {
+    #editor-id:focus {
+        padding-bottom: 60px !important; /* Make room for the bottom-pinned toolbar */
+    }
+}
+
+/* Hide scrollbars for the toolbar */
+.sticky-toolbar::-webkit-scrollbar {
+    display: none !important;
+}
+
+.toolbar-container {
+  background-color: rgba(0,0,0,0.03);
+  border-radius: 15px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.editor-box {
+  border: 1px solid #dee2e6;
+  border-radius: 15px;
+  padding: 15px;
+  background-color: white;
+}
+
+.app-wrapper.dark-mode .editor-box {
+  background-color: #2d2d2d;
+  border-color: #444;
+}
+
+.locked-blur {
+  filter: blur(4px);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* --- Sheets Heading --- */
+.lock-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  border-radius: 15px;
+}
+
+.heading-input {
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  background: transparent;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.heading-input:focus {
+  outline: none;
+  border-bottom-color: var(--qsheet-theme-color);
+}
+
+.media-preview-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.hover-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: opacity 0.2s;
+    border-radius: 8px;
+}
+
+.media-preview-container:hover .hover-overlay {
+    opacity: 1;
+}
+
+/* --- Utility --- */
+.icon-btn {
+  border-radius: 50%;
+  width: 5 rem;
+  height: 5 rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.floating-plus-btn {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 2000;
+  background: #00c800;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.floating-plus-btn i {
+  font-size: 2rem;
+  color: #fff;
+  line-height: 0;
+}
+
+.floating-plus-btn:hover {
+  background: #00c800;
+  color: #fff;
+}
+
+.floating-plus-btn.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+details.custom-toggle {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+}
+
+/* Radio button styling to prevent them from jumping around */
+.radio-group input[type="radio"] {
+    cursor: pointer;
+    margin: 0 3px;
+}
+
+/* Optional: Highlight the label of the checked radio */
+.radio-group input[type="radio"]:checked + label {
+    font-weight: bold;
+    color: #3c87f7; /* Qsheet color */
+}

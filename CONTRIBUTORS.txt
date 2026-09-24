@@ -1,0 +1,5 @@
+# Project Contributors
+
+- G Adarsh <gadarsh2017@gmail.com> (Project Lead, Design, Code, Documentation)
+- S Ganesh <sganesh.founder@gmail.com> (Design, Bug reports)
+
